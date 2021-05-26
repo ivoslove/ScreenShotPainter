@@ -74,8 +74,6 @@ Shader "Unlit/EraserBrush"
 			   	float cirle =  pow(uv.x-0.5f, 2)+pow(uv.y-0.5f*sizeY/size, 2);
 				if(cirle>0.25f)
 				   discard;
-				//if( uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0)
-					//discard;
 				fixed4 col = tex2D(_BrushTex,uv);
 				col.rgb = 1;
 				col *= _Color;
